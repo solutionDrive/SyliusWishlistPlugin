@@ -11,3 +11,5 @@
 /.idea
 
 /tests/Application/yarn.lock
+
+*.web-server-pid
