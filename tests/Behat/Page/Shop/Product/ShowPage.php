@@ -12,11 +12,18 @@ declare(strict_types=1);
 
 namespace Tests\SolutionDrive\SyliusWishlistPlugin\Behat\Page\Shop\Product;
 
+use Behat\Mink\Driver\Selenium2Driver;
 use Sylius\Behat\Page\Shop\Product\ShowPage as BasePage;
+use Sylius\Behat\Service\JQueryHelper;
 
 class ShowPage extends BasePage
 {
     public function addToWishlist() {
-        throw new \Exception('Todo: Implement me');
+
+        $this->getDocument()->pressButton('Add to wishlist');
+
+        if ($this->getDriver() instanceof Selenium2Driver) {
+            JQueryHelper::waitForAsynchronousActionsToFinish($this->getSession());
+        }
     }
 }
