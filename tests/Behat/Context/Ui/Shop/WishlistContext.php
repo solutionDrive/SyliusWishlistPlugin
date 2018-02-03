@@ -5,7 +5,6 @@ namespace Tests\SolutionDrive\SyliusWishlistPlugin\Behat\Context\Ui\Shop;
 
 use Behat\Behat\Context\Context;
 use Behat\Behat\Tester\Exception\PendingException;
-use Sylius\Behat\Page\Shop\Product\ShowPageInterface;
 use Sylius\Component\Core\Model\ProductInterface;
 use Tests\SolutionDrive\SyliusWishlistPlugin\Behat\Page\Shop\Product\ShowPage;
 
