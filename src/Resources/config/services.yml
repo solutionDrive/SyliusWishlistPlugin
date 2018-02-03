@@ -1,0 +1,7 @@
+services:
+    app.block_event_listener.homepage.layout.after_header:
+        class: Sylius\Bundle\UiBundle\Block\BlockEventListener
+        arguments:
+            - '@@SolutionDriveSyliusWishlistPlugin/_add_to_wishlist.html.twig'
+        tags:
+            - { name: kernel.event_listener, event: sylius.shop.product.show.add_to_cart_form, method: onBlockEvent }

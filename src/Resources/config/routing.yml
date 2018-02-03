@@ -1,0 +1,5 @@
+sd_add_to_wishlist:
+    path: /add_to_wishlist
+    defaults:
+        _controller: SolutionDriveSyliusWishlistPlugin:Wishlist:addToWishList
+        name: ~
