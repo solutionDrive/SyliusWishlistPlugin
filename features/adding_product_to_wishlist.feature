@@ -13,5 +13,4 @@ Feature: Adding a simple product to the wish list
   Scenario: Adding a product to the wish list as a logged in customer
     When I add this product to the wish list
     Then I should be notified that the product has been successfully added to the wishlist
-    When I go to the customer wish list page
     And on the wishlist page I should see the product "Sauerkraut"

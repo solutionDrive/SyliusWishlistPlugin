@@ -35,14 +35,6 @@ class WishlistContext implements Context
     }
 
     /**
-     * @When /^I go to the customer wish list page$/
-     */
-    public function iGoToTheCustomerWishListPage()
-    {
-        throw new PendingException();
-    }
-
-    /**
      * @Then /^I should be notified that the product has been successfully added to the wishlist$/
      */
     public function iShouldBeNotifiedThatTheProductHasBeenSuccessfullyAddedToTheWishlist()
@@ -51,7 +43,7 @@ class WishlistContext implements Context
     }
 
     /**
-     * @Given /^on the wishlist page I should see the product "([^"]*)"$/
+     * @Then /^on the wishlist page I should see the product "([^"]*)"$/
      */
     public function onTheWishlistPageIShouldSeeTheProduct($arg1)
     {
