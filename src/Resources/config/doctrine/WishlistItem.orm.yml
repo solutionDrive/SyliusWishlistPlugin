@@ -1,0 +1,33 @@
+SolutionDrive\SyliusWishlistPlugin\Entity\WishlistItem:
+    type: entity
+    table: sd_wishlist_item
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        createdAt:
+            type: datetime
+            column: created_at
+        updatedAt:
+            type: datetime
+            column: updated_at
+            nullable: true
+        state:
+            type: string
+            length: 255
+    oneToOne:
+        product:
+            targetEntity: Sylius\Component\Core\Model\Product
+            joinColumn:
+                name: product_id
+                referencedColumnName: id
+    manyToOne:
+        wishlist:
+            targetEntity: SolutionDrive\SyliusWishlistPlugin\Entity\WishlistItem
+            inversedBy: wishlistItems
+            joinColumn:
+                name: wishlist_id
+                referencedColumnName: id
