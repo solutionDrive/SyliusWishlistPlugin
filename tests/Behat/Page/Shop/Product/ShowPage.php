@@ -12,9 +12,9 @@ declare(strict_types=1);
 
 namespace Tests\SolutionDrive\SyliusWishlistPlugin\Behat\Page\Shop\Product;
 
-use Sylius\Behat\Page\Shop\Product\ShowPage as BasePage;
+use Sylius\Behat\Page\Shop\Product\ShowPage as BaseShowPage;
 
-class ShowPage extends BasePage
+class ShowPage extends BaseShowPage
 {
     public function addToWishlist()
     {
