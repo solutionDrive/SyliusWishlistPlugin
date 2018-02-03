@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Solutiondrive\Controller;
+namespace SolutionDrive\SyliusWishlistPlugin\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
