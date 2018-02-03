@@ -18,4 +18,8 @@ interface WishlistItemInterface extends ResourceInterface, TimestampableInterfac
     public function getState(): string;
 
     public function setState(string $state): void;
+
+    public function setWishlist(WishlistInterface $wishlist): void;
+
+    public function getWishlist(): WishlistInterface;
 }

@@ -37,6 +37,11 @@ class WishlistItem implements WishlistItemInterface
      */
     private $state = self::STATE_NEW;
 
+    /**
+     * @var WishlistInterface
+     */
+    private $wishlist;
+
     public function getId(): int
     {
         return $this->id;
@@ -80,5 +85,15 @@ class WishlistItem implements WishlistItemInterface
     public function setUpdatedAt(?\DateTimeInterface $updatedAt)
     {
         $this->updatedAt = $updatedAt;
+    }
+
+    public function getWishlist(): WishlistInterface
+    {
+        return $this->wishlist;
+    }
+
+    public function setWishlist(WishlistInterface $wishlist): void
+    {
+        $this->wishlist = $wishlist;
     }
 }
