@@ -6,6 +6,7 @@ namespace spec\SolutionDrive\SyliusWishlistPlugin\Entity;
 
 use PhpSpec\ObjectBehavior;
 
+use SolutionDrive\SyliusWishlistPlugin\Entity\WishlistInterface;
 use SolutionDrive\SyliusWishlistPlugin\Entity\WishlistItem;
 use SolutionDrive\SyliusWishlistPlugin\Entity\WishlistItemInterface;
 
@@ -50,5 +51,11 @@ class WishlistItemSpec extends ObjectBehavior
     {
         $this->setState('new_state');
         $this->getState()->shouldReturn('new_state');
+    }
+
+    function it_has_wishlist(WishlistInterface $wishlist)
+    {
+        $this->setWishlist($wishlist);
+        $this->getWishlist()->shouldReturn($wishlist);
     }
 }

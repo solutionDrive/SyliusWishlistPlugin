@@ -6,6 +6,7 @@ namespace spec\SolutionDrive\SyliusWishlistPlugin\Entity;
 
 use PhpSpec\ObjectBehavior;
 
+use SolutionDrive\SyliusWishlistPlugin\Entity\WishlistItemInterface;
 use Sylius\Component\Core\Model\CustomerInterface;
 
 use SolutionDrive\SyliusWishlistPlugin\Entity\Wishlist;
@@ -39,5 +40,11 @@ class WishlistSpec extends ObjectBehavior
     {
         $this->setUpdatedAt($dateTime);
         $this->getUpdatedAt()->shouldReturn($dateTime);
+    }
+
+    function it_has_multiple_wishlist_items(WishlistItemInterface $wishlistItem)
+    {
+        $this->addWishlistItem($wishlistItem);
+        $this->getWishlistItems()->shouldHaveCount(1);
     }
 }
