@@ -34,7 +34,7 @@ class WishlistContext implements Context
     }
 
     /**
-     * @Then /^I should be notified that the product has been successfully added to the wishlist$/
+     * @Then I should be notified that the product has been successfully added to the wishlist
      */
     public function iShouldBeNotifiedThatTheProductHasBeenSuccessfullyAddedToTheWishlist()
     {
