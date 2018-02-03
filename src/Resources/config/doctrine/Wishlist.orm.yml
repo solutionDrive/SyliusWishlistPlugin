@@ -1,6 +1,7 @@
 SolutionDrive\SyliusWishlistPlugin\Entity\Wishlist:
     type: entity
     table: sd_wishlist
+    repositoryClass: SolutionDrive\SyliusWishlistPlugin\Repository\WishlistRepository
     id:
         id:
             type: integer
