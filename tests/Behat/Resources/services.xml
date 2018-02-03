@@ -12,6 +12,7 @@
             class="Tests\SolutionDrive\SyliusWishlistPlugin\Behat\Context\Ui\Shop\WishlistContext"
         >
             <argument type="service" id="solutiondrive.syliuswishlistplugin.behat.page.shop.product.show" />
+            <argument type="service" id="sylius.behat.notification_checker"/>
             <tag name="fob.context_service" />
         </service>
 

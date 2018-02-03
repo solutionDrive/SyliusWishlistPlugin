@@ -5,6 +5,7 @@ namespace Tests\SolutionDrive\SyliusWishlistPlugin\Behat\Context\Ui\Shop;
 
 use Behat\Behat\Context\Context;
 use Behat\Behat\Tester\Exception\PendingException;
+use Sylius\Behat\Service\NotificationCheckerInterface;
 use Sylius\Component\Core\Model\ProductInterface;
 use Tests\SolutionDrive\SyliusWishlistPlugin\Behat\Page\Shop\Product\ShowPage;
 
@@ -16,11 +17,18 @@ class WishlistContext implements Context
     private $productShowPage;
 
     /**
-     * @param ShowPage $productShowPage
+     * @var NotificationCheckerInterface
      */
-    public function __construct(ShowPage $productShowPage)
+    private $notificationChecker;
+
+    /**
+     * @param ShowPage                     $productShowPage
+     * @param NotificationCheckerInterface $notificationChecker
+     */
+    public function __construct(ShowPage $productShowPage, NotificationCheckerInterface $notificationChecker)
     {
         $this->productShowPage = $productShowPage;
+        $this->notificationChecker = $notificationChecker;
     }
 
     /**
@@ -37,7 +45,7 @@ class WishlistContext implements Context
      */
     public function iShouldBeNotifiedThatTheProductHasBeenSuccessfullyAddedToTheWishlist()
     {
-        throw new PendingException();
+        $this->notificationChecker->checkNotification('Item has been added to cart', NotificationType::success());
     }
 
     /**
