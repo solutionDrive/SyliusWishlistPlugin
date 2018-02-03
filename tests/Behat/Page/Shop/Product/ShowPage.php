@@ -18,6 +18,6 @@ class ShowPage extends BaseShowPage
 {
     public function addToWishlist()
     {
-        $this->getDocument()->pressButton('Add to wishlist');
+        $this->getDocument()->clickLink('Add to wishlist');
     }
 }

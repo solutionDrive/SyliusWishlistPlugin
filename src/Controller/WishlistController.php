@@ -18,7 +18,7 @@ class WishlistController extends Controller
     {
         $referer = $request->headers->get('referer');
 
-        $this->addFlash('success', 'Added product to wishlist');
+        $this->addFlash('success', 'Item has been added to wishlist');
         return $this->redirect($referer);
     }
 }
