@@ -3,3 +3,4 @@ sd_add_to_wishlist:
     defaults:
         _controller: SolutionDriveSyliusWishlistPlugin:Wishlist:addToWishList
         name: ~
+
