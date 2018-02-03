@@ -1,8 +1,9 @@
 <?php
 
+declare(strict_types=1);
+
 namespace spec\SolutionDrive\SyliusWishlistPlugin\Entity;
 
-use Prophecy\Argument;
 use PhpSpec\ObjectBehavior;
 
 use SolutionDrive\SyliusWishlistPlugin\Entity\WishlistItem;
@@ -17,25 +18,27 @@ class WishlistItemSpec extends ObjectBehavior
         $this->shouldHaveType(WishlistItem::class);
     }
 
-    function it_should_implement_wishlist_item_interface()
+    function it_implements_wishlist_item_interface()
     {
         $this->shouldImplement(WishlistItemInterface::class);
     }
 
-    function it_has_product(
-        ProductInterface $product
-    )
+    function it_has_product(ProductInterface $product)
     {
         $this->setProduct($product);
         $this->getProduct()->shouldReturn($product);
     }
 
-    function it_has_creation_date(
-        \DateTime $dateTime
-    )
+    function it_has_created_at_date(\DateTime $dateTime)
     {
-        $this->setCreationDate($dateTime);
-        $this->getCreationDate()->shouldReturn($dateTime);
+        $this->setCreatedAt($dateTime);
+        $this->getCreatedAt()->shouldReturn($dateTime);
+    }
+
+    function it_has_updated_at_date(\DateTime $dateTime)
+    {
+        $this->setUpdatedAt($dateTime);
+        $this->getUpdatedAt()->shouldReturn($dateTime);
     }
 
     function it_has_default_state_new()
