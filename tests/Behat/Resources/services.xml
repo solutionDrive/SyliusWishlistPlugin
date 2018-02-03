@@ -2,5 +2,21 @@
 
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
+        <service
+                id="solutiondrive.syliuswishlistplugin.behat.context.ui.shop.wishlist"
+                class="Tests\SolutionDrive\SyliusWishlistPlugin\Behat\Context\Ui\Shop\WishlistContext"
+        >
+            <argument type="service" id="solutiondrive.syliuswishlistplugin.behat.page.shop.product.show" />
+            <tag name="fob.context_service" />
+
+        </service>
+
+        <service
+                id="solutiondrive.syliuswishlistplugin.behat.page.shop.product.show"
+                class="Tests\SolutionDrive\SyliusWishlistPlugin\Behat\Page\Shop\Product\ShowPage"
+                parent="sylius.behat.page.shop.product.show"
+                public="false"
+        />
+
     </services>
 </container>

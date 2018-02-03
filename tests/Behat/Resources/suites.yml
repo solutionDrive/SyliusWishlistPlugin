@@ -34,5 +34,7 @@ default:
                 - sylius.behat.context.ui.shop.product
                 - sylius.behat.context.ui.shop.registration
                 - sylius.behat.context.ui.user
+
+                - solutiondrive.syliuswishlistplugin.behat.context.ui.shop.wishlist
             filters:
                 tags: "@wishlist && @ui"
