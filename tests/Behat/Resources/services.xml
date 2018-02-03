@@ -6,6 +6,7 @@
                 id="solutiondrive.syliuswishlistplugin.behat.context.ui.shop.wishlist"
                 class="Tests\SolutionDrive\SyliusWishlistPlugin\Behat\Context\Ui\Shop\WishlistContext"
         >
+            <argument type="service" id="sylius.behat.page.shop.product.show" />
             <tag name="fob.context_service" />
         </service>
     </services>

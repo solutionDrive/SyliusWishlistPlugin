@@ -5,14 +5,31 @@ namespace Tests\SolutionDrive\SyliusWishlistPlugin\Behat\Context\Ui\Shop;
 
 use Behat\Behat\Context\Context;
 use Behat\Behat\Tester\Exception\PendingException;
+use Sylius\Behat\Page\Shop\Product\ShowPageInterface;
+use Sylius\Component\Core\Model\ProductInterface;
 
 class WishlistContext implements Context
 {
     /**
-     * @When /^I add this product to the wish list$/
+     * @var ShowPageInterface
      */
-    public function iAddThisProductToTheWishList()
+    private $productShowPage;
+
+    /**
+     * @param ShowPageInterface $productShowPage
+     */
+    public function __construct(ShowPageInterface $productShowPage)
     {
+        $this->productShowPage = $productShowPage;
+    }
+
+    /**
+     * @When /^I add (this product) to the wish list$/
+     */
+    public function iAddThisProductToTheWishList(ProductInterface $product)
+    {
+        $this->productShowPage->open(['slug' => $product->getSlug()]);
+//        $this->productShowPage->addToCart();
         throw new PendingException();
     }
 
