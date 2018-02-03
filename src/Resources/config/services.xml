@@ -6,6 +6,8 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd"
 >
     <services>
-
+        <!-- Factories -->
+        <service id="sd.wishlist.factory.wishlist" class="SolutionDrive\SyliusWishlistPlugin\Factory\WishlistFactory"/>
+        <service id="sd.wishlist.factory.wishlistitem" class="SolutionDrive\SyliusWishlistPlugin\Factory\WishlistItemFactory"/>
     </services>
 </container>
