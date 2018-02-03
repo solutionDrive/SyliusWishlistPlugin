@@ -49,9 +49,9 @@ class WishlistContext implements Context
     }
 
     /**
-     * @Then /^on the wishlist page I should see the product "([^"]*)"$/
+     * @Then on the wishlist page I should see the product :product
      */
-    public function onTheWishlistPageIShouldSeeTheProduct($arg1)
+    public function onTheWishlistPageIShouldSeeTheProduct(ProductInterface $product)
     {
         throw new PendingException();
     }
