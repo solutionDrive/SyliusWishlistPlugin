@@ -29,7 +29,7 @@ class WishlistContext implements Context
     public function iAddThisProductToTheWishList(ProductInterface $product)
     {
         $this->productShowPage->open(['slug' => $product->getSlug()]);
-//        $this->productShowPage->addToCart();
+//        $this->productShowPage->addToWishlist();
         throw new PendingException();
     }
 
