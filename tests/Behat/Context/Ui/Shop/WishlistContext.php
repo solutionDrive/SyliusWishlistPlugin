@@ -31,7 +31,6 @@ class WishlistContext implements Context
     {
         $this->productShowPage->open(['slug' => $product->getSlug()]);
         $this->productShowPage->addToWishlist();
-        throw new PendingException();
     }
 
     /**
