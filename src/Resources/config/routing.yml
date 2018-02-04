@@ -1,6 +1,4 @@
-sd_add_to_wishlist:
+solutiondrive_sylius_wishlist_plugin:
     path: /add_to_wishlist/{id}
     defaults:
         _controller: SolutionDriveSyliusWishlistPlugin:Wishlist:addToWishList
-        name: ~
-
