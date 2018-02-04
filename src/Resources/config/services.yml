@@ -4,4 +4,4 @@ services:
         arguments:
             - '@@SolutionDriveSyliusWishlistPlugin/_add_to_wishlist.html.twig'
         tags:
-            - { name: kernel.event_listener, event: sylius.shop.product.show.add_to_cart_form, method: onBlockEvent }
+            - { name: kernel.event_listener, event: sonata.block.event.sylius.shop.product.show.add_to_cart_form, method: onBlockEvent }
