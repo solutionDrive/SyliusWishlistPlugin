@@ -9,5 +9,11 @@
         <!-- Factories -->
         <service id="sd.wishlist.factory.wishlist" class="SolutionDrive\SyliusWishlistPlugin\Factory\WishlistFactory"/>
         <service id="sd.wishlist.factory.wishlistitem" class="SolutionDrive\SyliusWishlistPlugin\Factory\WishlistItemFactory"/>
+
+        <service id="solutiondrive.sylius_wishlist_plugin.block_event_listener.shop.add_to_cart_form" class="Sylius\Bundle\UiBundle\Block\BlockEventListener">
+            <tag name="kernel.event_listener" event="sonata.block.event.sylius.shop.product.show.add_to_cart_form" method="onBlockEvent"/>
+            <argument>@SolutionDriveSyliusWishlistPlugin/_add_to_wishlist.html.twig</argument>
+        </service>
+
     </services>
 </container>

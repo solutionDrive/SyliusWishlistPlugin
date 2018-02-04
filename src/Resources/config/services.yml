@@ -1,7 +1,0 @@
-services:
-    solutiondrive_sylius_wishlist_plugin.block_event_listener.shop.add_to_cart_form:
-        class: Sylius\Bundle\UiBundle\Block\BlockEventListener
-        arguments:
-            - '@@SolutionDriveSyliusWishlistPlugin/_add_to_wishlist.html.twig'
-        tags:
-            - { name: kernel.event_listener, event: sonata.block.event.sylius.shop.product.show.add_to_cart_form, method: onBlockEvent }
