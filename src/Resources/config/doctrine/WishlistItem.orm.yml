@@ -18,7 +18,7 @@ SolutionDrive\SyliusWishlistPlugin\Entity\WishlistItem:
         state:
             type: string
             length: 255
-    oneToOne:
+    manyToOne:
         product:
             targetEntity: Sylius\Component\Core\Model\Product
             joinColumn:
