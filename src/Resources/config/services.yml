@@ -1,5 +1,5 @@
 services:
-    app.block_event_listener.homepage.layout.after_header:
+    solutiondrive_sylius_wishlist_plugin.block_event_listener.shop.add_to_cart_form:
         class: Sylius\Bundle\UiBundle\Block\BlockEventListener
         arguments:
             - '@@SolutionDriveSyliusWishlistPlugin/_add_to_wishlist.html.twig'
