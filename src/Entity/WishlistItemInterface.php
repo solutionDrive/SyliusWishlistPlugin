@@ -13,7 +13,7 @@ interface WishlistItemInterface extends ResourceInterface, TimestampableInterfac
 
     public function getProduct(): ProductInterface;
 
-    public function setProduct(ProductInterface $state): void;
+    public function setProduct(ProductInterface $product): void;
 
     public function getState(): string;
 
